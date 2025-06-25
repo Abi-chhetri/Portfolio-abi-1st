@@ -7,7 +7,7 @@ let title=document.querySelector('.title')
 let waveText="Hey, there 👋"
 let nameText="I'm"
 let nameText1=" Abi chhetri"
-let aimText="A Frontend Developer || Aspiring Software Engeenier"
+let aimText="A Frontend Developer || Aspiring Software Engineer"
 let titleText="I specialize in creating modern, responsive, and user-friendly websites."
 
 let i=0;
