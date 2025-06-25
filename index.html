@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="port.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="index.js" defer></script>
+    <script>
+        function sendMail(event) {
+            if (event) event.preventDefault();
+
+            const params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("msg").value,
+            };
+
+            emailjs.send("service_fgz57kl", "template_lkxj269", params, "_TRqMo6m-PEB7T7Dd")
+                .then((response) => {
+                alert("Email sent successfully!");
+                })
+                .catch((error) => {
+                alert("Error caught. Email might still be sent.");
+            });
+            
+            document.getElementById("name").value="";
+            document.getElementById("email").value="";
+            document.getElementById("msg").value="";
+        }
+    </script>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            À
+        </div>
+
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="link">
+            <a href="https://www.instagram.com/xettri_abi6?igsh=MTZyaTdqZnN0NWg1bQ=="><img src="./img/icons8-instagram-50.png" alt="instagram png icon" loading="lazy"></a>
+            <a href="https://www.linkedin.com/in/abi-chhetri-b4aaa231b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./img/icons8-linkedin-50.png" alt="linkedin png icon" loading="lazy"></a>
+            <a href="https://github.com/Abi-chhetri"><img src="./img/icons8-github-50.png" alt="githum png icon" loading="lazy"></a>
+        </div>
+
+    </nav>
+    <aside class="sidebar">
+
+        <p class="ham">&#8801;</p>
+        <div id="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.instagram.com/xettri_abi6?igsh=MTZyaTdqZnN0NWg1bQ==">Instagram</a>
+            <a href="https://www.linkedin.com/in/abi-chhetri-b4aaa231b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkedin</a>
+            <a href="https://github.com/Abi-chhetri">Github</a>
+            <p class="cls" onclick="handleClick()">Close &nbsp; &nbsp; ╳</p>
+        </div>
+
+    </aside>
+    <main class="body2">
+
+        <header class="top" id="home">
+            <div class="text">
+                <div class="wave"></div>
+                <div>
+                    <span class="name"></span> <span class="name1"></span>
+                </div>
+                <div class="aim">
+                    
+                </div>
+                <div>
+                    <p class="title"></p>
+                </div>
+            </div>
+            <div>
+                <img class="c-3d" loading="lazy loading="lazy"" src="./img/Discover the power of JSON in web development! Our….jpg" alt=" searc google 3d illustration of coders">
+            </div>
+        </header>
+
+        <section class="btn">
+            <a class="proj" href="#project">VIEW PROJECTS</a>
+            <a class="res" href="./img/Resume.pdf" download>DOWNLOAD RESUME</a>
+        </section>
+
+        <section class="abt" id="about">
+            <div>
+                <img class="me" src="./img/abi.jpg" loading="lazy" alt="mine photo">
+            </div>
+            <div>
+                <p class="about-h">About Me</p>
+                <p>
+                    Hi! I'm Abi Chhetri, a passionate and curious frontend developer 
+                    who began my journey in web development in 2024. I enjoy turning ideas
+                    into responsive, visually apealing, user-friendly websites.
+                </p>
+                <br>
+                <p>
+                    I believe every challenge is a chance to learn and grow. Each project I
+                     take on is a new opportunity to learn and improve. I enjoy solving problems
+                      creatively and always aim to build clean, user-friendly solutions. I'm actively
+                    looking for internship opportunities where I can contribute, grow,
+                    and learn from experienced developers.
+                </p>
+            </div>
+        </section>
+
+        <p class="proj-h" align="center">PROJECTS</p>
+        <section class="proj-sec" id="project">
+
+            <div class="proj-1">
+
+                <div class="text-p1">
+                    <p class="td-h">Todo App</p>
+                    <p>
+                        A minimal yet powerful task management app designed to help users organize
+                        their daily activities efficiently. This project highlights my ability to 
+                        build interactive and functional user interfaces using React. It demonstrates
+                        my understanding of component-based architecture, state handling, event-driven
+                        updates, and modern styling techniques. React-js, Tailwind and for statemanagement 
+                        UseContext was used to create this project.
+                        <br>
+                        <h3>Features</h3>
+                        <ul style="margin-left: 15px; margin-top: -20px;">
+                            <li>CRUD Operations.</li>
+                            <li>Mark tasks as completed with visual feedback.</li>
+                            <li>Tasks saved in localStorage (so nothing’s lost on refresh)</li>
+                        </ul>
+                    </p>
+                    <a href="https://todo-app-ten-green-32.vercel.app">Visit to Project &rarr;</a>
+                </div>
+
+                <div class="todo">
+                    <img src="./img/todo.png" alt="todo app" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proj-2">
+
+                <div class="w-app">
+                    <img src="./img/wp.png" alt="weather-app" loading="lazy">
+                </div>                
+
+                <div class="text-p2">
+                    <p class="td-h"">Weather App</p>
+                    <div>
+                        <p>
+                        A sleek weather application that provides real-time
+                         weather information based on user location.
+                          Designed with an emphasis on clean UI and useful weather insights.
+                          <br>
+                          <br>
+                          This project showcases my ability to integrate third-party APIs, 
+                          handle asynchronous data, and build interactive UIs. It also reflects
+                           my understanding of working with real-time data, error handling, and
+                            geolocation in modern frontend development.
+
+                            
+                            <h3>Features</h3>
+                            <ul style="margin-left: 20px;">
+                                <li>Real-time weather data fetched from the MetoWeather API.</li>
+                                <li>Auto-fetch weather based on user's location.</li>
+                                <li>Displays humidity, wind speed, and weather state with icons.</li>
+                                <li>Built with React, Tailwind CSS and CSS3.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <a href="https://abi-chhetri.github.io/weather-app/">&larr; Visit to Project</a>
+                </div>
+
+            </div>
+            
+            <div class="hr">
+        </section>
+
+
+        <section class="skl">
+
+            <div class="skl-h">SKILLS</div>
+            <div class="skl-img">
+                <img src="./img/icons8-html5-48.png" alt="html5 icon">
+                <img src="./img/icons8-css3-100.png" alt="css3 icon">
+                <img src="./img/icons8-javascript-48.png" alt="javascript icon">
+                <img class="react" src="./img/icons8-react-js-50.png" alt="reactjs icon">
+                <img class="tail" src="./img/icons8-tailwind-css-100.png" alt="Tailwind css icon">
+                <img class="java" src="./img/icons8-java-94.png" alt="java icon">
+            </div>
+            <div class="hr"></div>
+        </section>
+
+        <section id="contact">
+            <div class="cont">
+                CONTACT
+            </div>
+            <form class="form" onsubmit="sendMail(event)">
+
+                <div>
+                <label for="name" class="lbl">Name:</label>
+                <input type="text" name="name" class="nlbl" placeholder="Full Name" id="name" required>
+                </div>
+
+                <div>
+                <label for="email" class="lbl">Email:</label>
+                <input type="email" name="email" class="nlbl" placeholder="Email" id="email" required>
+                </div>
+                <div>
+                    <p class="lbl">Message: </p>
+                    <textarea name="textarea" class="textarea" placeholder="Any message for me ?" id="msg" required></textarea>
+                </div>
+                <button type="submit" class="snd">SEND</button>
+                
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="text-f">Designed and Develop by Abi Chhetri ...</div>
+    </footer>
+</body>
+</html>
